@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    background-color: var(--Light-Gray);
+}
+
+.main .description {
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    justify-content: space-evenly;
+    max-width: 360px;
+    border-radius: 7px 7px 0 0;
+    background-color: #fff;
+}
+
+.main .description h2 {
+    color: var(--Cyan);
+}
+
+.main .description h3 {
+    color: var(--Bright-Yellow);
+    font-weight: 400;
+}
+
+.main .description p {
+    color: var(--Grayish-Blue);
+}
+
+.main .plan {
+    max-width: 360px;
+    width: 100%;
+    height: 14rem;
+    display: flex;
+    padding: 0 7%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--Cyan);
+}
+
+.main .plan h2 {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 5%;
+}
+
+.main .plan .price {
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.main .plan .price span {
+    color: var(--Light-Gray);
+    font-size: 1rem;
+    width: 100px;
+    margin-left: 5%;
+}
+
+.main .plan .detail {
+    color: #fff;
+}
+
+.main .plan .btn {
+    background-color: var(--Bright-Yellow);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    height: 50px;
+    box-shadow: 0px 5px 10px #0a0a0a7c;
+    margin-top: 8%;
+}
+
+.main .plan a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.main .whyUs {
+    max-width: 360px;
+    width: 100%;
+    height: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(179, 66%, 45%);
+    border-radius: 0px 0px 7px 7px;
+}
+
+.main .whyUs ul {
+    list-style: none;
+    width: 260px;
+}
+
+.main .whyUs .head {
+    margin-bottom: 8%;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.main .whyUs ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (min-width:768px) {
+    .main {
+        /* border: 2px solid blue; */
+        display: grid;
+        grid-template-columns: 360px 360px;
+        grid-template-rows: 17rem 17rem;
+        padding: 5%;
+        align-content: center;
+    }
+
+    .main .description {
+        /* height:100%; */
+        max-width: 100%;
+        grid-column-start: span 2;
+        border-radius: 7px 7px 0 0;
+    }
+
+    .main .plan {
+        grid-row: 2;
+        grid-column: 1;
+        /* border: 2px solid blue; */
+        height: 100%;
+        border-radius: 0px 0px 0px 7px;
+    }
+
+    .main .whyUs {
+        grid-column: 2/2;
+        grid-row: 2;
+        /* height: 100%; */
+        border-radius: 0px 0px 7px 0;
+    }
+
+    .main .description h2 {
+        font-size: 1.7rem;
+    }
+
+    .main .description h3 {
+        font-size: 1.2rem;
+    }
+
+    .main .description p {
+        font-size: 1.2rem;
+    }
+
+    .main .plan .btn:hover{
+        background-color: #0a0a0a7c;
+    }
+}
